@@ -1,0 +1,116 @@
+.fox-instagram {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    
+    margin: -4px -2px 0;
+    
+    &.spacing-none {
+        margin: 0;
+        .fox-instagram-item {
+            padding: 0;
+        }
+    }
+    
+    &.spacing-big {
+        margin: -30px -15px 0;
+        .fox-instagram-item {
+            padding: 30px 15px 0;
+        }
+    }
+    
+}
+.fox-instagram-item {
+    display: block;
+    padding: 4px 2px 0;
+    position: relative;
+    
+    img {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .6s ease-out;
+        transition-delay: .1s;
+    }
+    a {
+        color: inherit;
+        display: block;
+        outline: 0;
+    }
+    &.running_animation {
+        img {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+.instagram-item-image {
+    position: relative;
+    margin: 0;
+    background: #e9e9e9;
+}
+
+.fox-instagram {
+    
+    &.column-2 .fox-instagram-item {
+        width: 50%;
+    }
+    &.column-3 .fox-instagram-item {
+        width: 33.33%;
+    }
+    &.column-4 .fox-instagram-item {
+        width: 25%;
+    }
+    &.column-5 .fox-instagram-item {
+        width: 20%;
+    }
+    &.column-6 .fox-instagram-item {
+        width: 16.66%;
+    }
+    &.column-7 .fox-instagram-item {
+        width: 14.28%;
+    }
+    &.column-8 .fox-instagram-item {
+        width: 12.5%;
+    }
+    
+}
+
+.instagram-rollover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background: rgba(0,0,0,.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .1s ease-out;
+    
+    .rollover-text {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translate(0,-50%);
+        color: white;
+        text-align: center;
+        font-family: $heading;
+        
+        font-size: 14px;
+        
+        span + span {
+            margin-left: 10px;
+        }
+        i {
+            margin-right: 3px;
+        }
+    }
+}
+.instagram-item-image:hover .instagram-rollover {
+    opacity: 1;
+    visibility: visible;
+}

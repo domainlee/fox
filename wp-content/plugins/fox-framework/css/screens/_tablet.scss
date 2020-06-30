@@ -1,0 +1,97 @@
+// tablet screen like iPad, 768px - 1024px
+// all screens lower than 1280px will be displayed as 1024px wide
+@include mq($max-width: 1279px) {
+    
+    /* Member
+    -------------------- */
+    .member-name {
+        font-size: 1.4em;
+        padding: 8px 8px 0;
+    }
+    
+}
+
+/**
+ * Portrait Tablet
+ * target screen 768px
+ */
+@include mq($max-width: 1023px) {
+    
+    /* Counter
+    -------------------- */
+    .fox-counters {
+        
+        &.column-4 {
+            .fox-counter {
+                width: 50%;
+            }
+        }
+    }
+    .fox-counter:before {
+        display: none;
+    }
+    
+    /* Carousel
+    -------------------- */
+    .fox-carousel {
+        
+        &.column-4 {
+            .carousel-cell {
+                width: 50%;
+            }
+        }
+        
+        &.column-5,
+        &.column-6,
+        &.column-7,
+        &.column-8 {
+            .carousel-cell {
+                width: 33.33%;
+            }
+        }
+    }
+    
+    /* Gallery
+    -------------------- */
+    .fox-gallery-grid {
+        &.column-5,
+        &.column-6,
+        &.column-7,
+        &.column-8 {
+            .gal-item,
+            .grid-sizer {
+                width: 33.33%;
+            }
+        }
+    }
+    .fox-gallery-grid {
+        &.column-4 {
+            .gal-item,
+            .grid-sizer {
+                width: 50%;
+            }
+        }
+    }
+    
+    /* Portfolio
+    -------------------- */
+    .fox-portfolio {
+        &.column-4 {
+            .fox-portfolio-item,
+            .grid-sizer {
+                width: 50%;
+            }
+        }
+    }
+    
+    .fox-single-project.layout-halfwidth {
+        .content-main {
+            display: block;
+        }
+        .post-thumbnail {
+            width: 100%;
+            margin: 0 0 2em;
+        }
+    }
+    
+}

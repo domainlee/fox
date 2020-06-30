@@ -1,0 +1,689 @@
+Tags:
+
+minimal, blogger, blogging, elementor, fashion, food, gutenberg, personal blog, magazine, news, newspaper, personal, video, seo optimized, travel
+
+=== FOX 4.2 ===
+- Highlighted Feature Added: Fashion Demo
+- Highlighted Feature Added: 5 Thumbnail Hover Effects (Customize > Blog > Thumbnail)
+- Highlighted Feature Added: More social styles: design social share icons
+- Highlighted Feature Added: weekly, monthly, yearly option for most viewed posts
+- Highlighted Feature Added: category, tag, author cover image (edit category you'll see this option)
+- Highlighted Feature Added: Mailchimp Subscribe Form block (Mailchimp for WP plugin required)
+- Highlighted Feature Added: single social position on the side
+- Highlighted Feature Added: Update Fox Framework to v1.1
+
+- Feature Added: Sponsor post option
+- Feature Added: 5 Columns option for post grid layout
+- Feature Added: Elementor block title uppercase
+- Feature Added: add title weight, text transform to slider block
+- Feature Added: add options for excerpt size & color
+- Feature Added: more button styles
+- Feature Added: spacing between list items
+- Feature Added: post list vertical align option
+- Feature Added: Excerpt custom size & color
+- Feature Added: Add more single tag style
+- Feature Added: add post title super-tiny size option
+- Feature Added: navigation dropdown caret option
+- Feature Added: instagram header align option
+- Feature Added: add heading tiny + supertiny size
+- Feature Added: add Google Play icon to social list
+
+- Fix: two-column content justified alignment again
+- Fix: layout issue when empty post query returned.
+- Fix: progress bar accent color issue
+- Fix: custom sidebar missing import issue + duplicate widgets importing issue
+        // inc/admin/import/demo-import/inc/WidgetImporter.php
+        // if ( ! in_array( $new_instance_id, $sidebars_widgets[ $use_sidebar_id ] ) ) {
+- Fix: "category empty when import demo" issue
+- Fix: change elementor category ID -> slug to get higher compatibility
+
+=== FOX 4.2.1 ===
+- Fix single bottom posts + related posts, displaying posts from same categories not correctly
+
+=== FOX 4.2.2 ===
+- fix max section issue for homepage builder
+- fix view count format when count > 1000
+
+=== FOX 4.2.2.1 ===
+- fix typing mistake file inc/home-builder.php
+
+=== FOX 4.3 ===
+- homepage builder: non-duplicate posts option
+- homepage builder: more post layout options: masonry, vertical, standard, newspaper
+- homepage builder: section design option: color, background, border
+- homepage builder: more heading styles
+- homepage builder: more heading options: size, color, align
+- homepage builder: custom query option
+- homepage builder: supports custom post type taxonomy query
+- homepage builder: option to include/exclude multi-categories
+- homepage builder: option to include multi-authors
+- homepage builder: banner ad option for tablet/mobile
+- homepage builder: allow to use sidebar for each section
+- homepage builder: allow to display shortcode in each section
+
+- header: new stack 3 layout
+- header: social size, social style options
+- header: heavy shadow for header sticky
+- header: sticky header logo
+- header: allow to disable primary menu
+- header: option for hamburger button
+
+- footer: footer bottom, footer widgets custom color
+- footer: footer sidebar vertical align
+- footer: disable footer logo option
+
+- blog: supports grid 5 cols, masonry 5 cols for archive layouts
+- blog: thumbnail showing effect
+- blog: more options for each blog type: group 1, group 2, slider, vertical..
+
+- post: "live post" feature for breaking news
+- post: post hero dark skin
+- post: option to disable scroll down button for hero posts
+- post: minimal header logo height for hero posts
+- post: single post, top banner
+- post: allow to display related posts after both content and sidebar
+- post: support stretch wide and full for each individual image
+- post: query options for footer sliding box
+- post: allow to display featured posts in related posts, bottom posts, footer sliding box
+
+- design: block quote quote icon, alignment
+- design: design option for caption text
+- design: add drop cap font option, Gothic font
+- design: design options for subtitle
+
+- widget: 2, 3 column option for author grid widget
+
+- general: update google font list
+- general: built-in user avatar option
+
+- improve: overall design
+- improve: off-canvas menu design
+- improve: post group on mobile design
+- improve: social share
+- improve: mega menu item load on hover to improve site speed
+- improve: Recommend Instagram Feed plugin due to Instagram policy changes
+- improve: No longer requires Elementor
+- improve: Sidebar 2 columns on tablet for better responsive display
+- improve: post group on mobile
+- improve: contact form button
+- improve: hero post design
+- improve: CSS Sass structure
+
+- fix: can't disable header sticky
+- fix: alt tag for image logo
+- fix: drop cap issue when first letter is not in <p> tag
+- fix: review display when no review criteria
+- fix: empty metabox value in classic editor
+- fix: lightbox gallery issue
+- fix: sidebar missing when import demo
+- fix: woocommerce number of related products
+- fix: child theme stylesheet loading correctly
+
+- deprecate: lazy load due to lack of consistence. supports third-party lazyload plugins
+
+Fox 4.4
+
+HIGHLIGHTS
+
+- CUSTOMIZER SEARCH functionality
+- HOMEBUIDER DRAG & DROP to reorder builder sections
+- Allow to use widgets in builder section
+- Home builder layout: Post Modern Slider
+- Commentary Demo
+- Lifestyle Demo
+- Coronavirus data widget
+
+NEW FEATURES
+
+- add option for builder section content narrow
+- header sticky height
+- header navigation background option
+- builder section responsive visibility: ie. now you can hide some sections on tablet/mobile
+- header stack 4
+- header menu active style
+- builder section ad responsive visibility
+- add a few more quick translation words: Live, Comment form words
+- Page title align option in page settings for each page
+- builder heading border color option
+- widget (FOX) Imagebox
+- more post standard options
+- mobile logo height opiton
+- footer sidebar column text align option
+- footer sidebar margin, padding, border options
+- single post padding top option
+- header cart icon for woocommerce
+- thumbnail stretch container option
+
+ADJUSTMENTS
+
+- adjust: default header stick height to 40px. you can change it in Customize > Header Layout > Sticky Header
+- adjust: sticky header background opacity from 95% to 100%. you can change it in Customize > Header Layout > Sticky Header
+- adjust: improve post standard design (margin, padding, spacing)
+- adjust: button outline & fill are now 1px border instead of 2px
+- adjust: increase the tablet screen breakdown from 782px to 820px to support iPad 7th gen
+- adjust: subtitle now between title and meta (as before 4.3)
+- adjust: thumbnail index more beautiful for post widget small thumbnail
+
+FIXES
+
+- fix: header navigation border default value
+- fix: sticky post order descending error
+- fix: post group 1 border issue
+- fix: header shadow none
+- fix: tablet screen breakpoint to 840px to compatible with iPad 10"
+- fix: section builder ad code align center
+- fix: page title align by adding align option for each page
+- fix: section builder heading small size too close to the line
+- fix: sep border color post group 1
+- fix: default thumbnail not working issue
+- fix: import sidebar missing
+- fix: import post type error
+- fix: gallery bigger than content global option
+
+DEPRECATIONS
+
+- deprecated: main stream order. replaced by section drag/drop reorder feature
+
+========== Fox 4.4.0.1 ==========
+- fix post slider arrows issue
+- fix Instagram widget Elementor issue
+- option for woocommerce cart on header or off the side
+
+========== Fox 4.4.1 ==========
+- post vertical excerpt size option
+- improve a media embed like Spotify, Tiktok..
+- add "fox_final_params" hook for final parameters
+- add "fox_thumbnail_final_params" hook for final thumbnail parameters
+- add center text position option for hero full post
+
+- Fix: post big "keep reading" link
+- Fix: thumbnail hover effect, shape for vertical post, post group 1, 2
+- Fix: classic slider show/hide components
+- Fix: all videos, medias.. wider than content for single post
+- Fix: the ad issue when image upload then removed, ID no longer exists but ad still showing
+- Fix: gallery caption issue
+
+- adjust: move minimal logo option for single post to logo section to make it easier to find
+- adjust: color of new cases in Coronavirus update widget
+
+========== Fox 4.4.1.1 ==========
+- fix ad issue
+
+========== Fox 4.4.2 ==========
+- feature: grid border between grid/masonry items
+- feature: author list widget author avatar shape, color, separator option
+- feature: border sep between sidebar & primary area
+- feature: improve about widget with lot of options
+
+- fix: sidebar padding mobile issue
+- fix: the bug can't delete user avatar/cover image
+
+========== Fox 4.4.2.1 ==========
+- fix standard layout live indicator issue
+- fix polylang issues
+
+========== Fox 4.4.3 ==========
+- feature: add option for wrapper box padding
+- feature: option to show/hide thumbnail on post list widget
+- feature: post group 2 medium thumbnail size
+- feature: option for enabling excerpt ...
+- feature: non-duplicate post option for top area archive page
+
+- fix: hero post scroll button not align center
+- fix: cancel reply fix typo issue
+- fix: add missing words for Polylang
+
+@todo list Fox 4.5
+/ more flexible border for section heading, more section heading styles
+/ single post navigation
+/ fix: autoload + lazy load by wp rocket
+/ drop cap custom font upload
+/ Co Author plus plugin
+/ select style button from customizer
+/ more elementor section templates
+/ grid-list block
+/ disable if pager option for blocks
+/ categories block
+/ elementor template
+/ improve review
+/ bottom posts grid -> list on mobile
+/ ad between posts
+/ hand draw lines
+/ list item on mobile instead of stack
+/ Single Under Nav Posts
+/ more drop cap style
+/ reading progress in header lower edge
+/ load gallery images more effective with single call and check for attachment exist
+/ grid 5 columns: leading + 2-cols on mobile
+/ titlebar subcategries on mobile
+/ circle for author avars in widget, like theatlantic
+/ Hero Image Caption
+/ parallax for hero full
+/ Figcaption when only little text, looks very lame
+/ Grid to list on mobile
+/ add author list border option, author widget shape
+/ reset when import fail
+
+================         FOX 4.0        ========================
+// Rewrite many template functions for future uses
+// Add a lot of hooks
+// reorganize options in customizer in a better order
+// text logo
+// Inline header fullwidth
+// add fox_before_header action
+// register above header & below header sidebar, allows to add widgets around the header
+// banner alt text for sections
+// Optimize Google Font Load
+// Custom Font Load
+// Comprehensive Show/Hide options for single posts
+// Add many show/hide options for single posts
+// allow to feature some post from post backend
+// Change "Post View Counter" plugin repository
+// Include feather icon font
+// Option to use word base or character base
+// Default thumbnail when your post doesn't have a thumbnail
+// Header Builder
+// Show/Hide Header option for each individual post/page
+// Show/Hide Footer option for each individual post/page
+// Add Button Widget
+// Add Header Logo Widget
+// Add Header Navigation widget
+// More Options for social widget
+// More Social Icons to come
+// Brand Color option for social icons
+// Add Header Search Widget
+// Improve Mega Menu, calculate position better
+// Add caret indicator to menu
+// Fix menu touch issue on iPad by using superfish for menu
+// Implement Taxonomy Metabox Framework
+// Compatible with WP comment, Disqus comment, Facebook comment
+// Rewrite comment styling for higher compatibility
+// Update latest Google Font List
+// Comment by author label
+// Redesign titlebar more elegant
+// 404 custom title
+// 404 custom message
+// 404 search form
+// ON/OFF Footer Sidebar
+// Custom Footer Sidebar Layout
+// Custom Header / Footer Logo Link
+// More Option for Back To Top
+// Header Sticky Background
+// Custom skin for footer sidebar
+// Custom skin for footer bottom
+// Many styling properties for footer sidebar / footer bottom
+// Unlimited Sidebar & sidebar replacement for posts / pages / categories / tags
+// Supports Elementor Page Builder
+// Consistent Code
+// option to show latest on single post
+// media posts: instagram post, twitter post, facebook post, video, gif etc
+// stop saving empty meta values for better db performance
+// Reorganize post formats in backend for better understanding
+// Stop supporting Jetpack Related Post source
+// Deprecate ignore_sticky_posts for the homepage
+// New way to exclude pages from search result for better performance
+// Use a lot of illustration for better understading the options
+// Fix Next / Next &raquo; issue in translation
+// Improve Google Font Load Speed by remove redundant weights
+// Allow to use menu image icon, feather icon in menu
+// Better Code & Logic, improve site performance significantly
+// elle gallery post
+// Include post view counter as a part of theme
+// Rewrite related posts code for better performance
+// Comporehensive option system for dropcap
+// Comporehensive option system for 2-column layout
+// load google Font more effective in customizer
+// better lightbox layout & performance
+// stop support comment in block share
+// list becomes grid on mobile
+// New colorbox
+// Layout boxed
+// Post subtitle option
+// View count to work with multisite
+// fix off-canvas search issue and generally, off canvas fixed position issue
+// Allows to select font position for many small items: meta, category, date, author etc
+// Custom font for single post content
+// Make Responsive Ad
+// built-in lazyload
+// improve fadein
+// rewrite JS
+// deprecate the ad between post items
+// deprecate hand-drawn lines
+// remove redundant page template supports
+// Tag & Category Image
+        
+=== FOX 4.0.1 ===
+- fix latest posts issue of author box
+- fix contact form 2-columns issue
+- fix footer bottom social icons
+- fix max_section issue with classic homepage builder
+- add a stronger Run Updater option for customers updated from Fox v3
+
+=== FOX 4.0.2 ===
+- Feature Added: WooCommerce sidebar for shop pages
+- Fix: featured image single post doesn't show up
+- Fix: Customize Multi-checkbox option
+- Fix: WooCommerce lightbox gallery
+- Fix: primary color issue for WooCommerce
+- Fix: WooCommerce page title issue
+- Fix: WooCommerce theme options missing issue
+
+=== FOX 4.1 ===
+- Feature added: Fox Science Demo
+- Feature added: Category, Tag, Author Top Area section (Customize > Blog > Category, Tag, Author Top Area)
+- Feature added: Reading Progress for single posts: Customize > Single Post > Reading Progresss
+- Feature added: add link style for post content (Customize > DESIGN > Misc)
+- Feature added: add circular "back to top" button with few more options: border, border radius
+- Feature added: tag options for elementor block query
+- Feature added: header search icon size options
+- Feature added: more options for social icons
+- Feature added: archive title color
+- Fix: main stream pages 2, 3.. issue
+- Fix: custom code ad shortcode issue
+- Fix: pagination current page issue
+- Fix: Previous & Next Story issue in post navigation.
+- Fix: element font issue
+- Fix: primary menu third-dropdown position absolute
+- Fix: custom color issue on news blocks
+- Fix: big post meta font issue
+- Fix: archive list narrow padding top issue
+- Fix: adjust classic demo with default: border and image logo
+
+=== FOX 4.1.1 ===
+- Fix: post slider title color hover issue
+- Fix: conflict between Fox & WPBakery Page Builder in the backend
+- Fix: update Google fonts list to latest version
+- Feature Added: Add mins read and views to Quick Translation section
+
+@TODO
+// fix import sidebar issue from sidebar manager
+// fix import category in elementor
+// add more social share styles & positions
+// add thumbnail hover style
+- titlebar stretch fullwidth option
+- Grid desktop --> List on mobile
+- fix bg color customizer empty no trigger
+- elementor save content without lazyload filter applied
+- WMPL
+- BBPress
+- BuddyPress
+- supports membership plugins
+- fix element deep problem (too many layers of elements)
+- shop the look inline post
+- fix lightbox issue on cloned carousel items
+- More Demos to come
+- AMP
+- Supports Twitter Feed
+- gif featured image
+- supports infinite scroll
+- rich snippet
+- supports visual content
+- interactive content: quizz, polls infographics
+- sticky sidebar for elementor section/row?
+- calculate flexslider height from beginning
+- more creative instagram layout
+- Sponsored Post by Link Post Format
+- you might be interested in box half scrolling
+- Support Giphy gif image
+- refresh autoplay video issue
+- add REVIEW to query / sorting etc
+- Portfolio
+- Fix "Show only featured posts?" issue Elementor doesn't change in frontend
+- smart header
+- Big Post Widget
+- Sticky Ad 2 sides
+- More header layouts: off-canvas
+- optimize meta_key table
+- co-author
+- business blog
+- social network blogs
+- audio artist, album etc. allow to upload playlist & controls to create a podcast site
+- audio download button
+- facebook-like gallery
+- remove elementor lightbox script
+- fix nested masonry gallery inside newspaper layout
+- post group 2 on ipad portrait screen
+- fix lightbox stuttering issue
+- fix comment reply + autoload next post 
+- polish review section
+
+=== v2.0 ====
+
+- FEATURE ADDED: Homepage Builder with 10 predefined sections
+- FEATURE ADDED: Top Slider Option
+- FEATURE ADDED: "Newspaper" layout
+- FEATURE ADDED: Grid and Masonry with option 2, 3, 4 columns
+- FEATURE ADDED: Post view and most-viewed widget
+- FEATURE ADDED: Page that lists all of featured posts
+- FEATURE ADDED: Menu icon option to menu
+- FEATURE ADDED: Submenu indicator for menu items
+- FEATURE ADDED: Option dark/light submenu
+- FEATURE ADDED: Animation for elements
+- FEATURE ADDED: Widget title background color & active menu item background color
+- FEATURE ADDED: Option for not display featured image on single post/blog post
+- FEATURE ADDED: Option for display content/excerpt on the main blog
+- FEATURE ADDED: Loading for Masonry style, Newspaper style
+- FEATURE ADDED: Readmore button for grid/masonry/list layout
+- FEATURE ADDED: Format sign for gallery, audio, video posts
+- FEATURE ADDED: Documentation for version 2.0
+
+- IMPROVED & FIXED: Minor CSS issues
+- IMPROVED & FIXED: General Code Quality
+- IMPROVED & FIXED: Responsiveness and Responsive CSS file
+- IMPROVED & FIXED: Table of contents CSS file for Child Theme Developer
+- IMPROVED & FIXED: Change hand-drawn lines to modern lines to make theme look more modern but keep hand-drawn lines as an option
+- IMPROVED & FIXED: Layout option & Sidebar Option completely to make it easier to control and extend the theme
+- IMPROVED & FIXED: Posts thumbnail to square for a better display and site loading time
+- IMPROVED & FIXED: Default primary color
+- IMPROVED & FIXED: Lines from Grind & Masonry layout
+- IMPROVED & FIXED: Thumbnail display on related posts or same-category posts
+- IMPROVED & FIXED: Redundant files (such as demo.php, thumbnail-grid.php...)
+- IMPROVED & FIXED: Masonry Performance
+- IMPROVED & FIXED: Change from Sticky post & latest highlights to Homepage Builder which is more powerful and customizable
+- IMPROVED & FIXED: Aesthetic aspect of the theme
+
+=== v2.0.1 ===
+- Fix Vimeo icon issue
+- Fix minor CSS/JS issues
+- Update the Docs
+- Fix Retina issue to reduce HTTP Requests
+
+=== v 2.1 ===
+- FEATURE ADDED: Add menu item third dropdown
+- FEATURE ADDED: Add search button to header
+- FEATURE ADDED: Add option for container width
+- FEATURE ADDED: Wordpress Gallery
+- IMPROVED & FIXED: Fix Retina issue
+
+=== v 2.1.1 ===
+- FEATURE ADDED: Display tags on single post
+
+=== v 2.1.2 ===
+
+=== v 2.2 ===
+- Slogan align center
+- Mega Menu
+- Update Font Awesome System
+- Fix Footer Social Line-height
+- Header area to add advertisement
+- Option to select single-column or two-column layout of each post
+- Option to set a custom number of posts to show on homepage
+- Set slider autoplays by default (if you wish to modify, open js/main.js file)
+- Translate Prev/Next words for slider
+- Sticky Sidebar
+
+=== v 2.3 ===
+- Add option to exclude categories from main blog posts
+- Add offset option for main blog
+- Include Vafpress post format UI into theme core
+- Full option to select both single-column and two-column for both posts and pages
+- Improve site loading time by depricating old related posts algorithm
+- Loads Google Fonts better
+- Update Font Awesome 4.6.3
+
+=== v 2.4 ===
+- WP 4.7 Compatible
+- Update Font Awesome to 4.7
+- Use SASS for CSS
+- Combine all JS files into one for better loading
+- Remove metakey from counter plugin element
+- Link Post Format
+- Footer Menu
+- WooCommerce Support
+- Review System
+- Mailchimp Plugin Support
+
+=== v 2.4.1 ===
+- Fix: Review always showup issue
+
+=== v 2.5 ===
+- Fix the issue with offset + custom homepage post number
+- Fix gallery format icon issue
+- Allows to display video/gallery/audio post format in homepage builder
+- Ad Code (Adsense or custom code) and Image Banner between sections on homepage builder
+- Ad Code (Adsense or custom code) and Image Banner between sections before and after content on single posts
+
+=== v 2.5.1 ===
+- Fix twitter share issue with special characters in title
+
+=== v 2.6 ===
+- Fix Pinterest button for https sites
+- Fix "View all" text homepage builder
+- Add offset option for query of each section
+- Recommend "Mailchimp Plugin for WP"
+- Support "Custom Post Type" for each section
+- Remove support touch icons due to core support
+- Update PDF Documentation
+
+=== v 2.7 ===
+- Add heading text for main stream
+- Add ad between articles of main stream
+- WooCommerce 3.0 ready
+
+=== v 2.7.1 ===
+- Update: track week counter for posts
+- Update: all hard coded http:// to https:// to support SSL
+
+==== FOX 2.8 ====
+- create many template tag functions for components & developers
+- add standard schema.org for theme
+- ajax mega menu to load newest posts
+- sidebar option for each individual post/page
+- make review section more visualized
+- sidebar option for each tag, category
+- add linked in share button
+- add more option to display post list widget
+- add option date for best rated widget
+- add pinterest widget
+- fix masonry loading issue Chrome
+- add option to display view count
+- add instagram as native widget
+- add author list widget
+- compatible with latest WooCommerce 3.3.5
+- compatible with WordPress 4.9.6
+- allow add html tags to copyright text
+- update language file
+- caption below thumbnail for credits
+- option to disable sticky header
+
+==== FOX 2.8.0.1 ====
+- fix social profile option in customizer
+
+==== FOX 2.8.0.2 ====
+- fix thumbnail issue for newspaper layout
+- fix translating issue in + category
+
+==== FOX 2.9 ====
+// infinite scroll for single post (autoload next post)
+// customize options for share icons
+// improve review section by adding summary text + buttons
+// more dropcap styles + dropcap shortcode
+// rewrite the code for better use/performance
+// option to remove border
+// more header layouts (inline/stack)
+// fix mega menu on mobile
+// choose related posts source from jetpack
+// improve mega menu post items
+// Support custom post type
+// Add "lightbox" link class to open lightbox
+// Add link border bottom for content link
+// Improve blockquote style
+// Option to remove category label from categories
+// Implement off canvas mobile menu for theme
+// fix: video caption below video
+// improve mobile view
+// update language files
+
+remove Post Views Counter from FOX's core.
+one click installation
+
+improve baw-post-views-count to support caching plugin
+https://wordpress.org/plugins/baw-post-views-count/
+
+- FIX: add h1 tag to logo
+- FEATURE: add more icons to social list: Snapchat, 500px, WhatsApp
+
+==== FOX 2.9.1 ====
+- FIX: facebook icon issue
+- FIX: single post sidebar issue
+
+==== FOX 3.0 ====
+
+// one click import demo
+// Option for thumbnail size
+// Improve heading / accent color options
+// Hero image on single post
+// allow more than 10 sections
+// Post group for homepage builder
+// Vertical post for the homepage builder
+// WP 5.1 compatible
+// improve child theme structure for better adaption
+// add human difference time option
+// set default border option is no border
+// change default column setting to one columns
+// open colorbox for gallery block & image block
+// allows to choose related posts source from Jetpack
+// allows to use COOL page
+// enable featured image on pages
+// allow to move main stream to between sections
+// improve many minor styles both on desktop & mobile
+// rewrite many template functions for reuse
+
+==== FOX 3.1 ====
+// fix offcanvas menu customizer
+// option for time fashion
+// fix One Click Import Demo issue when plugin installed
+// fix woocommerce shop row issue on Safari
+// fix search exclude problem
+// option to hide featured image each post
+// fix hero image for border case
+// half-width photo on tablet screen
+// fix carousel white space end carousel
+// add link post format
+
+==== FOX 3.1.1 ====
+// Fix the issue featured image doesn't show up
+
+==== FOX 3.2 ====
+- consistent options for show/hide things from single post
+- author on single posts
+- show/hide logo on single posts
+- improve speed
+- different single featured photo
+- move review system to bottom
+- H1 to front page
+- Next &raquo; vs Next
+
+- gdpr compliance
+- more blocks for builder
+- improve WooCommerce
+- More demos. Improve demo page
+- improve documentation
+- improve theme description
+- improve showcase FOX
+- improve mobile layout
+- responsive banner spot
+- subtitle field for a post
+
+OPTIMIZE https://wordpress.stackexchange.com/questions/187446/reduce-or-prevent-calling-of-update-meta-cache
+https://pluginrepublic.com/how-to-handle-large-queries-in-wordpress/

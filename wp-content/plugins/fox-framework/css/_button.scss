@@ -1,0 +1,93 @@
+/* Button
+-------------------------------------------------------------------------------------- */
+.fox-button {
+    display: inline-block;
+    margin: 0 10px 5px 0;
+    vertical-align: bottom;
+    
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    
+    
+    background-image: none;
+    @include user-select(none);
+}
+.fox-btn {
+    
+    @include display(flex);
+    @include align-content(center);
+    @include align-items(center);
+    @include justify-content(center);
+    text-align: center;
+    
+    i {
+        margin-left: 8px;
+        display: inline-block;
+        line-height: inherit;
+        font-size: inherit;
+    }
+}
+
+.btn-primary {
+    background: $accent;
+    color: white;
+}
+
+/* Alignment
+--------------------- */
+.fox-button.button-center,
+.fox-button.button-right {
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+.fox-button.button-right {
+    text-align: right;
+    margin: 0;
+}
+.fox-button.button-center .fox-btn,
+.fox-button.button-right .fox-btn {
+    @include display(inline-flex);
+}
+
+    /* block */
+.fox-button.button-block {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Different Styles
+--------------------- */
+
+    /* outline */
+.fox-btn.btn-outline,
+.fox-btn.btn-outline:hover {
+    background: none;
+    color: #111;
+    border: 2px solid;
+    line-height: 40px;
+    box-shadow: none;
+}
+.fox-btn.btn-outline:after {
+    background: currentColor;
+    margin-top: 0;
+    left: -2px;
+    right: -2px;
+}
+
+    /* fill */
+.fox-btn.btn-fill {
+    background: none;
+    color: #111;
+    border: 2px solid;
+    line-height: 40px;
+    box-shadow: none;
+    
+    &:hover {
+        color: #fff;
+        background: #111;
+        border-color: #111;
+    }
+}

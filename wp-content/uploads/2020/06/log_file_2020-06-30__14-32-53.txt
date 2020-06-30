@@ -1,0 +1,75 @@
+
+---Downloaded files---
+The import files for: Default were successfully downloaded!
+Initial max execution time = 300
+Files info:
+Site URL = http://theme.com/fox
+Data file = /Users/mienle/www/dev/theme/fox/wp-content/uploads/2020/06/demo-content-import-file_2020-06-30__14-32-53.xml
+Widget file = /Users/mienle/www/dev/theme/fox/wp-content/uploads/2020/06/demo-widgets-import-file_2020-06-30__14-32-53.json
+Customizer file = /Users/mienle/www/dev/theme/fox/wp-content/uploads/2020/06/demo-customizer-import-file_2020-06-30__14-32-53.dat
+Redux files:
+not defined!
+
+---pt-ocdi/before_content_import---
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---pt-ocdi/before_widgets_import---
+
+
+---Importing widgets---
+Main Sidebar : 
+
+(FOX) About - About Me - Imported
+(FOX) Social - Follow Me - Imported
+(FOX) Instagram - Instagram - Imported
+Categories - No Title - Imported
+(FOX) Ad - Banner - Imported
+(FOX) Post List - Popular - Imported
+(FOX) Authorlist - Authors - Imported
+
+Page Sidebar : 
+
+(FOX) Ad - No Title - Imported
+
+Footer 1 : 
+
+Text - About Us - Imported
+
+Footer 2 : 
+
+Mailchimp Sign-Up Form - Newsletter - Imported
+
+Footer 3 : 
+
+Tag Cloud - No Title - Imported
+
+Footer Bottom Stack : 
+
+(FOOTER) Logo - No Title - Imported
+(FOOTER) Copyright - No Title - Imported
+(FOOTER) Menu - No Title - Imported
+(FOX) Button - No Title - Imported
+
+Home Sidebar : 
+
+Gallery - No Title - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---pt-ocdi/after_import---
+

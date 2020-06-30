@@ -1,0 +1,113 @@
+/* TEXT
+-------------------- */
+@include mq($min-width: 768px) {
+    .vc_row:last-child .wpb_text_column:last-child {
+        margin-bottom: 0;
+    }
+}
+@include mq($max-width: 767px) {
+    .vc_row:last-child .vc_column_container:last-child .wpb_text_column:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* HELPER SHORTCODES
+-------------------- */
+.fox-spacer {
+    
+    @include clearfix;
+    
+    height: 35px;
+    clear: both;
+    
+    &.half {
+        height: 20px;
+    }
+    &.double {
+        height: 60px;
+    }
+}
+.hr {
+    border-top: 1px solid rgba(0,0,0,.08);
+    @include clearfix;
+    margin: 30px 0;
+}
+.fox-dropcap {
+    width: 90px;
+    height: 90px;
+    vertical-align: baseline;
+    display: block;
+    float: left;
+    margin: 6px 14px 6px 0;
+    u {
+        position: absolute !important;
+        left: -7000px;
+        overflow: hidden;
+        clip: rect(1px 1px 1px 1px);
+    }
+}
+.fox-highlight {
+    background: #ffc;
+    padding: .1em .4em;
+    border-radius: 2px;
+}
+a.fox-nice-link {
+    color: inherit;
+    outline: 0;
+    border-bottom: 1px solid;
+    &:hover {
+        border-bottom-color: transparent;
+    }
+}
+
+/* LIST
+-------------------- */
+.fox-list {
+    ul,
+    ol {
+        list-style: none;
+        padding: 0;
+        margin-left: 0;
+    }
+    li {
+        display: block;
+        
+        a {
+            color: inherit;
+            font-weight: bold;
+        }
+        
+        & + li {
+            border-top: 1px solid;
+            padding-top: .5em;
+            margin-top: .5em;
+        }
+    }
+}
+
+/* SEPARATOR
+-------------------- */
+.vc_separator h4 {
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+/* QUOTE
+-------------------- */
+.fox-element-quote blockquote:last-child {
+    margin-bottom: 0;
+}
+
+/* EMBED
+-------------------- */
+.fox-element-fox_embed {
+    .twitter-tweet {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .EmbeddedTweet {
+        margin-right: 0 !important;
+    }
+}

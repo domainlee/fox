@@ -1,0 +1,266 @@
+/* CONTACT FORM 7
+----------------------------------------------------------------------------------------------------------------- */
+
+/*	Main Layout
+-------------------------------- */
+.wpcf7 {
+	display:block;
+	clear:both;
+	
+    margin: 0 0 1em;
+    
+    #{$all-text-inputs} {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    // 2 columns layout
+    // legacy
+    // now we can use "row" and "col" options
+    .input {
+        display: block;
+        width: 48%;
+        float: left;
+        margin-right: 4%;
+    }
+    .textarea {
+        display: block;
+        overflow: hidden;
+    }
+    
+    p,
+    .row {
+        margin-bottom: 20px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    
+    textarea {
+        height: 149px;
+    }
+}
+span.wpcf7-form-control-wrap {
+	display:block;
+	margin-top:.3em;
+}
+.wpcf7-submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33.33%;
+    min-width: 180px;
+    
+    &:hover {
+        background: $accent;
+    }
+}
+	
+/*	Response
+-------------------------------- */
+div.wpcf7-response-output {
+	margin-left:0 !important;
+	margin-right:0 !important;
+	
+    padding: .3em 1em !important;
+    font-size: .9em;
+    margin: 0 0 2em;
+    
+    &.wpcf7-validation-errors {
+        @extend .warning;
+    }
+    &.wpcf7-mail-sent-ng {
+        @extend .error;
+    }
+    &.wpcf7-mail-sent-ok {
+        @extend .success;
+    }
+}
+
+span.wpcf7-not-valid-tip {
+	padding:2px 8px !important;
+	border:none !important;
+	color: #ab5c5c !important;
+	background: #efd0d0 !important;
+    font-size: .9em;
+}
+span.wpcf7-not-valid-tip-no-ajax {
+	display:block;
+	margin-top:6px !important;
+}
+
+/* MAILCHIMP since 2.4
+ * @since 4.2 we have subscribe form block
+-------------------------------------------------------------------------------------- */
+.mc4wp-form-fields {
+    p {
+        margin-bottom: 10px;
+    }
+    #{$all-text-inputs} {
+        width: 100%;
+        
+        @include placeholder {
+            color: inherit;
+            opacity: 1;
+        }
+    }
+    #{$all-buttons} {
+        width: 100%;
+    }
+}
+
+.fox-form {
+    display: block;
+    clear: both;
+}
+.form-inline {
+    .mc4wp-form-fields {
+        display: inline-flex;
+        align-items: center;
+        
+        > * {
+            margin: 0;
+        }
+        
+        > * + * {
+            margin-left: 5px;
+        }
+    }
+    p {
+        margin: 0;
+    }
+    #{$all-text-inputs} {
+        width: 260px;
+    }
+}
+
+@media (max-width: $ipad-p) {
+    .form-inline {
+        .mc4wp-form-fields {
+            display: block;
+            
+            > * + * {
+                margin-left: 0;
+                margin-top: 1em;
+            }
+        }
+        #{$all-text-inputs},
+        #{$all-buttons} {
+            width: 100%;
+        }
+    }
+}
+
+.fox-form-inline-wrapper {
+    display: table;
+    margin: 0 auto;
+    
+    @include media( tablet ) {
+        display: block;
+    }
+}
+.fox-form-inline {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    
+    #{$all-text-inputs} {
+        width: 300px;
+        
+        @include media( tablet ) {
+            width: 100%;
+        }
+    }
+    
+    > * + * {
+        margin-left: 10px;
+        
+        &:last-child {
+            margin-left: -1px;
+        }
+    }
+    
+    button {
+        background: none;
+        padding: 0;
+        height: 44px;
+        text-decoration: none;
+        &:hover {
+            background: none;
+            color: inherit;
+        }
+        .long-arrow {
+            width: 50px;
+        }
+    }
+    
+    @include media( tablet ) {
+        display: block;
+        
+        > * + * {
+            margin-left: 0;
+        }
+    }
+    
+}
+.mc4wp-form-fields .fox-form-inline p {
+    margin-bottom: 0;
+    
+    @include media( tablet ) {
+        margin-bottom: 10px;
+    }
+}
+.form-title {
+    margin: 0;
+}
+.form-subtitle {
+    margin: 5px 0 0;
+    font-size: .9em;
+}
+
+/* ELEMENTOR SECTION
+---------------------------------------- */
+/* eliminate padding 10px */
+.elementor-section:not(.elementor-section-stretched) {
+    .elementor-container {
+
+        &.elementor-column-gap-default {
+            margin:-10px !important;
+            // width: calc(100% + 20px);
+        }
+        &.elementor-column-gap-narrow {
+            margin:-5px !important;
+            width: calc(100% + 10px);
+        }
+
+        &.elementor-column-gap-extended {
+            margin:-15px !important;
+            width: calc(100% + 30px);
+        }   
+
+        &.elementor-column-gap-wide {
+            margin:-20px !important;
+            width: calc(100% + 40px);
+        }
+
+        &.elementor-column-gap-wider {
+            margin:-30px !important;
+            width: calc(100% + 60px);
+        }
+    }
+}
+
+// hide it until it's untilized
+.elementor-section-stretched {
+    
+    opacity: 0;
+    visibility: hidden;
+    
+    // note
+    transition: opacity 1s ease, visibility 1s ease, background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s !important;
+}
+.elementor-section-stretched[style] {
+    opacity: 1;
+    visibility: visible;
+}

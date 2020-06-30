@@ -1,0 +1,509 @@
+/* Mobile Header
+---------------------------------------------------------------------------------------------------------------------------- */
+html {
+    -webkit-tap-highlight-color:transparent;
+}
+#masthead-mobile-height {
+    @include clearfix;
+    display: none;
+    height: $mobile-height;
+}
+#masthead-mobile {
+    display: none;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    
+    .container {
+        position: relative;
+        z-index: 20;
+        height: $mobile-height;
+    }
+    
+}
+#masthead-mobile {
+}
+.masthead-mobile-bg {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: white;
+    z-index: 1;
+}
+.masthead-mobile-part {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    @include display( flex );
+    @include align-items( center );
+    
+    >* + * {
+        margin-left: 5px;
+    }
+}
+.masthead-mobile-left {
+    left: 0;
+}
+.masthead-mobile-right {
+    right: 0;
+}
+
+// from ipad
+@include media( tablet ) {
+    
+    #masthead,
+    #minimal-header {
+        display: none;
+    }
+    #masthead-mobile,
+    #masthead-mobile-height {
+        display: block;
+    }
+    
+}
+
+/* Mobile Logo
+--------------------------------------- */
+#mobile-logo {
+    margin: 0 auto;
+    @include display( flex );
+    
+    height: 100%;
+    max-width: calc( 100% - 90px);
+    
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    
+    line-height: $mobile-height;
+    font-weight: 400;
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        line-height: inherit;
+        
+        &:focus {
+            outline: 0;
+        }
+    }
+    
+    img {
+        display: block;
+        width: auto;
+        height: 36px;
+        max-width: 100%;
+    }
+    
+}
+
+/* Hamburger buttn
+--------------------------------------- */
+.hamburger-btn {
+    color: inherit;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color .2s ease-out;
+    
+    &:focus {
+        outline: 0;
+    }
+    
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    
+    i {
+        display: block;
+        line-height: inherit;
+    }
+    .feather-x {
+        display: none;
+    }
+}
+.offcanvas-open .hamburger-btn {
+    .feather-menu {
+        display: none;
+    }
+    .feather-x {
+        display: block;
+    }
+}
+
+/* Off-canvas menu
+ * @since 2.9
+ * @improved in 4.0
+ * @improved since 4.3
+---------------------------------------------------------------------------------------------------------------------------- */
+#offcanvas {
+    
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 56px - 1px);
+    
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
+    -webkit-overflow-scrolling: touch;
+    z-index: 99999;
+    
+}
+.admin-bar #offcanvas {
+    top: $mobile-height + 32px;
+}
+#offcanvas-bg {
+    
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4000;
+    // border: 0 solid $border;
+    border-width: 1px 0 0;
+    
+    z-index: 99990;
+    
+}
+.offcanvas-inner {
+    padding: 10px 0;
+}
+.offcanvas-bg {
+    background: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll !important; // yes, shouldn't be fixed
+}
+#offcanvas,
+#offcanvas-bg {
+    
+    top: $mobile-height;
+    @include transform( translate3d( -100%, 0, 0) );
+    
+}
+.offcanvas-open {
+    overflow: hidden;
+    
+    #offcanvas,
+    #offcanvas-bg {
+        
+        @include transform( translate3d( 0, 0, 0) );
+        
+    }
+}
+
+/* Off-canvas element
+--------------------------------------- */
+.offcanvas-element {
+    
+    display: block;
+    position: relative;
+    padding-top: 10px;
+    
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 16px;
+        left: 16px;
+        content: "";
+        display: block;
+        // border-top: 0 solid;
+        z-index: 10;
+    }
+    
+    & + .offcanvas-element:before {
+        border-width: 1px 0 0;
+    }
+    
+}
+
+// social icons
+.offcanvas-element.social-list {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* Off-canvas Search
+--------------------------------------- */
+.offcanvas-search {
+    padding: 0 16px;
+    .s {
+        padding-left: 16px;
+        padding-right: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    .submit {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+}
+
+.offcanvas-overlay {
+    display: none;
+    z-index: 99980;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.6);
+    
+    opacity: 0;
+    visibility: hidden;
+    @include transition( all .15s ease-out );
+}
+
+/* Off-Canvas On Screen >= 500px
+ * it won't display 100% width, just 320px width
+--------------------------------------- */
+@media (min-width: 500px ) {
+    #offcanvas,
+    #offcanvas-bg {
+        width: 320px;
+        top: 0;
+    }
+    .admin-bar {
+        #offcanvas,
+        #offcanvas-bg {
+            top: 32px;
+        }
+    }
+    #offcanvas-bg {
+        border: 0;
+    }
+    .offcanvas-overlay {
+        display: block;
+    }
+    .offcanvas-open {
+        
+        #offcanvas-bg {
+            // box-shadow: 10px 3px 20px rgba(0,0,0,.3);
+        }
+        .offcanvas-dark + #offcanvas-bg {
+            box-shadow: none;
+        }
+        .offcanvas-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+    }
+}
+
+/* Off-Canvas Menu
+--------------------------------------- */
+.offcanvas-nav {
+    
+    font-family: $nav;
+    font-size: 1em;
+    
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: block;
+    }
+    
+    a {
+        color: inherit;
+        padding: 5px 16px;
+        padding: 5px 0;
+        line-height: 36px;
+        transition: color .3s ease-out, background .3s ease-out;
+        
+        &:hover {
+            color: inherit;
+        }
+        
+        &:focus {
+            outline: 0 !important;
+        }
+    }
+    
+    /* First Level
+    -------------------- */
+    .menu > ul {
+        > li {
+            display: block;
+            position: relative;
+            
+            > a {
+                display: block;
+            }
+        }
+    }
+    
+    li {
+        display: block;
+        position: relative;
+        
+        padding: 0 16px;
+        
+        > .indicator {
+            display: none;
+            
+            position: absolute;
+            z-index: 32;
+            top: 0;
+            right: 0;
+            width: 46px;
+            height: 46px;
+            line-height: 46px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            
+            i {
+                display: inline-block;
+                @extend .feather;
+                @extend .feather-chevron-right;
+
+                transition: all .3s ease-out;
+            }
+        }
+        
+        & + li > a {
+            border: 0 solid $border;
+        }
+
+        &.menu-item-has-children {
+            > .indicator {
+                display: block;
+            }
+        }
+        
+        &:hover > a {
+            opacity: .9;
+        }
+        
+        &.active {
+            
+            // background: rgba(0,0,0,.1);
+            
+            > a {
+                // background: rgba(0,0,0,.1);
+            }
+            
+            > .indicator i {
+                transform: rotate(90deg);
+                // opacity: .2;
+                // @extend .feather-chevron-down;
+            }
+        }
+    }
+    
+    /* Deeper Levels
+    -------------------- */
+    ul ul {
+        display: none;
+        padding: 0;
+        margin: 0;
+        margin-left: 14px;
+        a {
+            display: block;
+            line-height: 28px;
+        }
+        
+        li.active {
+            // background: rgba(0,0,0,.1);
+            > a {
+                // background: rgba(0,0,0,.1);
+            }
+        }
+    }
+}
+
+/* Border problem
+--------------------------------------- */
+.offcanvas-style-has-border {
+    .offcanvas-nav li + li > a {
+        border-width: 1px 0 0;
+    }
+}
+
+/* Dark Skin
+--------------------------------------- */
+.offcanvas-dark {
+    
+    color: #999;
+    
+    & + .offcanvas-bg {
+        background: #000;
+    }
+    
+    .offcanvas-nav {
+        li {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        a {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        ul ul {
+            margin-left: 0;
+            a {
+                padding-left: 24px;
+            }
+        }
+    }
+    
+    .offcanvas-nav li:hover,
+    .offcanvas-nav .active,
+    .offcanvas-nav .current-menu-item,
+    .offcanvas-nav .current-menu-ancestor {
+        > a {
+            background: rgba(0,0,0,.2);
+            color: white;
+        }
+    }
+    
+    .offcanvas-nav a,
+    .offcanvas-nav .active > a,
+    .offcanvas-nav .current-menu-item > a,
+    .offcanvas-nav .current-menu-ancestor > a {
+        &:hover,
+        &:focus,
+        &:active {
+            color: white;
+        }
+    }
+    
+    .offcanvas-search .s {
+        border-width: 0 0 1px;
+        padding-left: 0;
+        background: none;
+    }
+    
+    .offcanvas-search .s,
+    .offcanvas-nav li + li > a {
+        border-color: rgba(255,255,255,.1);
+        border: 0;
+    }
+}

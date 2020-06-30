@@ -1,0 +1,147 @@
+/*
+Theme Name: Fox
+Theme URI: https://themeforest.net/item/the-fox-contemporary-magazine-theme-for-creators/11103012/
+Author: WiThemes
+Author URI: http://themeforest.net/user/withemes/
+Description: A Modern & Contemporary Blog / News / Magazine WordPress Theme for Creators
+Version: 4.4.3.1
+License: 
+License URI:
+Text Domain: wi
+Real tags:
+
+minimal blog,
+minimalist,
+clean,
+modern,
+
+fashion, 
+food,
+lifestyle,
+travel,
+
+gutenberg,
+elementor,
+video,
+
+news,
+blogger,
+personal,
+
+adsense
+
+blog, blogging, author, minimal, clean, modern, fashion, food, lifestyle, adsense, creative, science, writer, news, newspaper
+
+Tags: blog, news, photography, grid-layout, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-colors, custom-logo, custom-menu
+Primary use: Blog / Magazine / Newspaper
+
+Font info: 
+Magazine: Jost, Varela
+Times demo: English Towne
+Classic demo: Oswald, Merriweather
+Marie: Six cap
+Science: Bentham
+
+content width: 1080px
+
+*/
+
+// typography
+$body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$nav: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// color
+$accent: #db4a37;
+$link-color: #db4a36;
+$border: #ccc;
+
+// content width
+$container: 1080px;
+
+// screen widths
+$desktop: 1279px;
+$ipad: 1023px;
+$ipad-p: 767px;
+$iphone: 567px;
+$iphone-p: 479px;
+$iphone-5: 374px;
+
+$ipad-f: 0.88;
+$ipad-p-f: 0.71;
+$iphone-f: 0.5;
+$iphone-p-f: 0.42;
+
+// mobile header height
+$mobile-height: 54px;
+
+$fb: #3b5998;
+$ms: #0084ff;
+$tw: #55acee;
+$pin: #cc2127;
+$lin: #0077b5;
+$em: #111;
+$wa: #128c7e;
+$rd: #ff4500;
+
+/* IMPORT
+-------------------------------------------------------------------------------------------------------------------- */
+
+// 01 - LIB
+@import 'css/lib/bourbon/bourbon';
+@import 'css/lib/media-queries';
+@import 'css/lib/utilities'; // since 4.3
+@import 'css/lib/reset';
+@import 'css/lib/bootstrap_lite';
+@import 'css/lib/fontawesome-5.9.0/scss/fontawesome';
+@import "css/lib/fontawesome-5.9.0/scss/solid.scss";
+@import "css/lib/fontawesome-5.9.0/scss/brands.scss";
+@import 'css/lib/feather';
+@import 'css/lib/flexslider';
+@import 'css/lib/slick';
+@import 'css/lib/tooltipster';
+@import 'css/lib/magnific.popup'; // since 4.0
+@import 'css/lib/lightbox'; // since 4.0
+@import 'css/lib/brands_bg'; // since 4.0
+@import 'css/lib/brands_color'; // since 4.3
+
+// 02 - COMPONENTS
+@import 'css/common'; // typography, reusable code, general layout, WP default elements, form input, button
+@import 'css/elements'; // heading, instagram, authors, social
+@import 'css/header'; // header, navigation
+@import 'css/blog'; // blog layout, blog item, pagination, titlebar, archive page
+@import 'css/builder'; // section, heading
+@import 'css/single'; // single post layout, tag, authorbox, related posts..
+@import 'css/widgets'; // widgets
+@import 'css/footer'; // footer
+@import 'css/mobile'; // off-canvas menu
+@import 'css/plugins'; // wpcf7, mailchimp, elementor
+@import 'css/woocommerce'; // woocommerce
+@import 'css/legacy'; // code from previous versions, backward compatibility
+
+/**
+ * let those classes in the end of file
+ */
+.hide_on_desktop {
+    display: none;
+}
+.show_on_tablet {
+    @include media( tablet ) {
+        display: block;
+    }
+}
+.hide_on_tablet {
+    @include media( tablet ) {
+        display: none;
+    }
+}
+.show_on_mobile {
+    @include media( mobile ) {
+        display: block;
+    }
+}
+.hide_on_mobile {
+    @include media( mobile ) {
+        display: none;
+    }
+}

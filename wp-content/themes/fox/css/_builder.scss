@@ -1,0 +1,635 @@
+/* SECTIONS
+-------------------------------------------------------------------------------------- */
+.sections-spacing-small {
+    .wi-section + .wi-section {
+        margin-top: 2em;
+    }
+}
+.sections-spacing-normal {
+    .wi-section + .wi-section {
+        margin-top: 4em;
+    }
+}
+.sections-spacing-medium {
+    .wi-section + .wi-section {
+        margin-top: 6em;
+    }
+}
+.sections-spacing-large {
+    .wi-section + .wi-section {
+        margin-top: 8em;
+    }
+}
+
+.wi-section.hide_on_desktop + .wi-section {
+    margin-top: 0;
+    
+    @include media( tablet ) {
+        margin-top: 2em;
+    }
+    @include media( mobile ) {
+        margin-top: 2em;
+    }
+}
+
+.wi-section.hide_on_tablet + .wi-section {
+    @include media( tablet ) {
+        margin-top: 0;
+    }
+    @include media( mobile ) {
+        margin-top: 2em;
+    }
+}
+
+.wi-section.hide_on_mobile + .wi-section {
+    @include media( mobile ) {
+        margin-top: 0;
+    }
+}
+
+/* LAYOUT - since 4.3
+--------------------- */
+.section-inner {
+    min-height: 1px;
+    position: relative;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+    // since 4.4.2
+    .section-sep {
+        
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        border: 1px solid;
+        border-width: 0 1px 0 0;
+        z-index: 1;
+        margin-left: -20px;
+        
+        width: 74%; // width of the primary
+        
+        // responsive
+        @include media( tablet ) {
+            left: 70%;
+        }
+        @include media( mobile ) {
+            display: none !important;
+        }
+        
+    }
+
+.sidebar-left,
+.section-sidebar-left {
+    .section-sep {
+        border-width: 0 0 0 1px;
+        margin-left: auto;
+        margin-right: -20px;
+        left: auto;
+        right: 0;
+    }
+}
+.section-primary,
+.section-secondary {
+    position: relative;
+    z-index: 10;
+}
+.wi-section {
+    
+    overflow: hidden;
+    position: relative;
+    
+    &.section-has-sidebar {
+        
+        .section-inner {
+            // margin: 0 -20px;
+        }
+        
+        .section-primary {
+            padding-right: 40px;
+        }
+        
+        .section-primary,
+        .primary {
+            float: left;
+            min-width: 1px;
+            
+        }
+        .section-secondary,
+        .secondary {
+            float: left;
+            min-width: 1px;
+        }
+        
+        // TABLET
+        @include media( tablet ) {
+            
+            .section-inner {
+                margin: 0 -10px;
+            }
+            .section-primary,
+            .section-secondary,
+            .primary,
+            .secondary {
+                padding: 0 10px;
+            }
+            
+        }
+        
+        // mobile
+        @include media( mobile ) {
+            display: block;
+        }
+    }
+    
+    &.section-sidebar-left {
+        .section-primary {
+            float: right;
+            padding-left: 40px;
+            
+            @include media( mobile ) {
+                padding-left: 10px;
+            }
+        }
+        .section-secondary {
+            float: left;
+        }
+    }
+    
+}
+
+    // section stretch
+    // since 4.3
+.section-stretch-full {
+    overflow: hidden;
+    > .container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+    // section narrow
+    // since 4.4
+.section-stretch-narrow {
+    > .container {
+        width: 660px;
+    }
+}
+
+/* Section Design
+ * @since 4.3
+--------------------- */
+.wi-section {
+    &.has-background {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        
+        /**
+         * we must add extra some spacing after that
+         */
+        & + .wi-section:not(.has-background) {
+            margin-bottom: 20px;
+        }
+        
+        & + .wi-section.has-background {
+            margin-top: 0;
+        }
+    }
+    
+    &.has-border .section-container {
+        padding: 40px;
+        
+        @include media( tablet ) {
+            padding: 30px;
+        }
+        
+        @include media( mobile ) {
+            padding: 20px;
+        }
+    }
+}
+
+.section-border-1px .section-container {
+    border: 1px solid;
+}
+.section-border-2px .section-container {
+    border: 2px solid;
+}
+.section-border-3px .section-container {
+    border: 3px solid;
+}
+.section-border-4px .section-container {
+    border: 4px solid;
+}
+.section-border-5px .section-container {
+    border: 1px solid;
+}
+.section-border-6px .section-container {
+    border: 6px solid;
+}
+.section-border-8px .section-container {
+    border: 8px solid;
+}
+.section-border-10px .section-container {
+    border: 10px solid;
+}
+.section-border-dotted .section-container {
+    border: 1px dotted;
+}
+.section-border-dashed .section-container {
+    border: 1px dashed;
+}
+.section-border-shadow .section-container {
+    border: 1px solid;
+    border-width: 1px 8px 8px 1px;
+}
+
+.section-ad,
+.single-ad {
+    margin: 10px 0 30px;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+    // to align it center, since 4.4
+    .section-ad.ad-code .banner-inner {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+.main-stream {
+    .primary,
+    .secondary {
+        padding-bottom: 0;
+    }
+}
+.main-stream-ad {
+    width: 100%;
+    padding: 16px 16px 32px;
+    clear: both;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    a {
+        outline: 0;
+    }
+}
+
+/* Section Heading
+ * @since 4.3
+--------------------- */
+.section-heading {
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    
+    position: relative;
+    overflow: hidden;
+    
+    h2 {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    
+    &.custom-color {
+        h2, a, a:hover {
+            color: inherit;
+        }
+    }
+    
+    a {
+        color: inherit;
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+.heading-inner {
+    position: relative;
+    display: inline-block;
+}
+
+// line stretch
+.heading-line-stretch-content {
+    .container {
+        overflow: hidden;
+    }
+    .line {
+        width: 1400px;
+    }
+}
+
+.heading-line-stretch-full {
+    .line {
+        width: 1400px;
+    }
+}
+
+.heading-line-stretch-content-half {
+    .container {
+        overflow: hidden;
+    }
+    .line {
+        width: 300px;
+    }
+}
+
+// line
+.line {
+    
+    position: absolute;
+    transition: all .3s ease-out;
+    
+    &.line-l {
+        right: 100%;
+        margin-right: 20px;
+    }
+    &.line-r {
+        left: 100%;
+        margin-left: 20px;
+    }
+    
+}
+
+// line position
+.heading-line-bottom {
+    .line {
+        bottom: 17%;
+    }
+}
+.heading-line-middle {
+    .line {
+        top: 50%;
+        transform: translate(0,-50%);
+    }
+}
+
+// style
+.heading-1a .container {
+    border-top: 3px solid;
+}
+.heading-1a.heading-tiny,
+.heading-1a.heading-small,
+.heading-1a.heading-normal {
+    .container {
+        padding-top: 10px; // since 4.4
+    }
+}
+.heading-1b .container {
+    border-bottom: 3px solid;
+}
+.heading-1b.heading-tiny,
+.heading-1b.heading-small,
+.heading-1b.heading-normal {
+    .container {
+        padding-bottom: 10px; // since 4.4
+    }
+}
+
+.heading-line-2 {
+    .line {
+        border-top: 1px solid;
+    }
+}
+.heading-line-3 {
+    .line {
+        border-top: 6px solid;
+    }
+}
+.heading-line-4 {
+    .line {
+        height: 6px;
+        background: url(images/wave.png) center left repeat-x;
+        background-size: 80px;
+    }
+    .line-l {
+        background-position: center right;
+    }
+}
+
+.heading-5 {
+    .heading-inner {
+        padding: 10px 20px;
+        border: 5px solid;
+    }
+}
+
+.heading-6 {
+    .heading-inner {
+        
+        position: relative;
+        padding-bottom: 20px;
+        
+        .line-l {
+            height: 6px;
+            background: url(images/wave.png) center center repeat-x;
+            background-size: 80px;
+            
+            position: absolute;
+            bottom: 0;
+            left: -20px;
+            right: -20px;
+            margin: 0;
+        }
+    }
+}
+
+.heading-line-7 {
+    .line {
+        height: 40%;
+        background: repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 6px,
+          currentColor 7px,
+          currentColor 1px
+        );
+        background-position: top left;
+        
+        opacity: .5;
+    }
+}
+
+.heading-line-8 {
+    .line {
+        height: 40%;
+        background-image: radial-gradient(currentColor 20%, transparent 20%);
+        background-position: 0 0;
+        background-size: 8px 8px;
+        
+        opacity: .6;
+    }
+    .line-l {
+        background-position: 100% 0;
+    }
+}
+
+// size
+.heading-ultra h2 {
+    font-size: 8em;
+    
+    @include media( tablet ) {
+        font-size: 6em;
+    }
+    @include media( mobile ) {
+        font-size: 4em;
+    }
+}
+.heading-extra h2 {
+    font-size: 6.4em;
+    
+    @include media( tablet ) {
+        font-size: 4.2em;
+    }
+    @include media( mobile ) {
+        font-size: 3.2em;
+    }
+}
+.heading-large h2 {
+    font-size: 5em;
+    @include media( tablet ) {
+        font-size: 3.3em;
+    }
+    @include media( mobile ) {
+        font-size: 2.5em;
+    }
+}
+.heading-medium h2 {
+    font-size: 4em;
+    @include media( tablet ) {
+        font-size: 3em;
+    }
+    @include media( mobile ) {
+        font-size: 2.4em;
+    }
+}
+.heading-normal h2 {
+    font-size: 3em;
+    @include media( tablet ) {
+        font-size: 2.4em;
+    }
+    @include media( mobile ) {
+        font-size: 2em;
+    }
+}
+.heading-small h2 {
+    font-size: 2em;
+    @include media( tablet ) {
+        font-size: 1.8em;
+    }
+    @include media( mobile ) {
+        font-size: 1.5em;
+    }
+}
+.heading-tiny h2 {
+    font-size: 1.1em;
+    @include media( tablet ) {
+        font-size: 1em;
+    }
+    @include media( mobile ) {
+        font-size: .9em;
+    }
+}
+
+/* SECTION SIDEBAR
+ * @since 4.4
+-------------------------------------------------------------------------------------- */
+.section-sidebar-inner {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    
+    margin: -40px -20px 0;
+}
+.main-section-sidebar {
+    overflow: hidden;
+    
+    .widget {
+        flex: none;
+        padding: 40px 20px 0;
+        margin: 0 !important;
+        border: 0 !important;
+    }
+}
+.main-section-sidebar-1 {
+    .widget {
+        width: 100%;
+    }
+}
+.main-section-sidebar-2 {
+    .widget {
+        width: 50%;
+    }
+    @include media( mobile-small ) {
+        .section-sidebar-inner {
+            margin: 0;
+        }
+        .widget {
+            width: 100%;
+            padding: 0;
+            
+            & + .widget {
+                margin-top: 20px !important;
+            }
+        }
+    }
+}
+.main-section-sidebar-3 {
+    .widget {
+        width: 33.33%;
+    }
+    
+    @include media( mobile ) {
+        .section-sidebar-inner {
+            margin: 0;
+        }
+        .widget {
+            width: 100%;
+            padding: 0;
+            
+            & + .widget {
+                margin-top: 20px !important;
+            }
+        }
+    }
+}
+.main-section-sidebar-4 {
+    
+    .widget {
+        width: 25%;
+    }
+    
+    @include media( tablet ) {
+        .section-sidebar-inner {
+            margin: -20px -10px 0;
+        }
+        .widget {
+            width: 50%;
+            padding: 20px 10px 0;
+        }
+    }
+    
+    @include media( mobile ) {
+        .section-sidebar-inner {
+            margin: 0;
+        }
+        .widget {
+            width: 100%;
+            padding: 0;
+            
+            & + .widget {
+                margin-top: 20px !important;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,225 @@
+// phone screen
+@include mq($max-width: 767px) {
+    
+    // Visual Composer base margin
+    .wpb_button, .wpb_content_element, ul.wpb_thumbnails-fluid>li {
+        margin-bottom: 24px;
+    }
+    
+    /* Heading
+    --------------------------- */
+    
+    /* Carousel
+    --------------------------- */
+    .fox-carousel {
+        
+        &.column-3,
+        &.column-4,
+        &.column-5,
+        &.column-6,
+        &.column-7,
+        &.column-8 {
+            .carousel-cell {
+                width: 50%;
+            }
+        }
+        
+    }
+    
+    /* Counter
+    --------------------------- */
+    .fox-counters {
+        &.column-3,
+        &.column-5,
+        &.column-6 {
+            .fox-counter {
+                width: 50%;
+            }
+        }
+    }
+    
+    // Gallery
+    .fox-gallery-grid {
+    
+        &.column-4,
+        &.column-5,
+        &.column-6,
+        &.column-7,
+        &.column-8 {
+            .gal-item,
+            .grid-sizer {
+                width: 50%;
+            }
+        }
+    }
+    
+    /* Instagram
+    --------------------------- */
+    .fox-instagram {
+        &.column-4,
+        &.column-5,
+        &.column-6,
+        &.column-7,
+        &.column-8 {
+            .fox-instagram-item {
+                width: 50%;
+            }
+        }
+    }
+    
+    /* Mailchimp
+    --------------------------- */
+    .mailchimp-form-inline {
+        #{$all-text-inputs} {
+            width: 200px;
+        }
+        #{$all-buttons} {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+    
+    /* Member
+    --------------------------- */
+    .member-name {
+        padding: 12px 12px 0;
+    }
+    
+    /* Slider
+     * Now all fullscreen has an appropriate height
+    --------------------------- */
+    .fox-slider .height-element {
+        height: 480px;
+    }
+    
+    /* Portfoio
+    --------------------------- */
+    .fox-portfolio {
+        &.column-2,
+        &.column-3,
+        &.column-4 {
+            .fox-portfolio-item,
+            .grid-sizer {
+                width: 100%;
+            }
+        }
+    }
+    
+    .portfolio-cats a {
+        padding-left: 6px;
+        padding-right: 6px;
+        font-size: 12px;
+    }
+    
+    /* Slider
+    --------------------------- */
+    .cell-subtitle {
+        font-size: 1em;
+        border-bottom-width: 3px;
+        padding-bottom: 5px;
+    }
+    
+    /* Testimonial
+    --------------------------- */
+    .cell-testimonial-logo {
+        width: 90px;
+        margin-bottom: 1em;
+        &:after {
+            margin-top: 1em;
+        }
+    }
+    .cell-testimonial-content {
+        font-size: 1.1em;
+        max-width: 90%;
+    }
+    .cell-testimonial-meta {
+        margin-top: 1em;
+        &:before {
+            margin-bottom: 1em;
+        }
+    }
+    
+    .testimonial-content {
+        font-size: 1.1em;
+        padding: 1em;
+    }
+    
+}
+
+@include mq($max-width: 479px) {
+    
+    /* Carousel
+    --------------------------- */
+    .fox-carousel {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .carousel-cell {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .flickity-prev-next-button {
+        display: none;
+    }
+    
+    /* Counter
+    --------------------------- */
+    .fox-counters {
+        &.column-2,
+        &.column-3,
+        &.column-4,
+        &.column-5,
+        &.column-6 {
+            .fox-counter {
+                width: 100%;
+            }
+        }
+    }
+    
+    /* Dropcap
+    --------------------------- */
+    .fox-dropcap {
+        font-size: 2.4em;
+    }
+    
+    /* Gallery
+    --------------------------- */
+    
+    
+    /* Heading
+    --------------------------- */
+    .title-arrow .arrow-line-left, .title-arrow .arrow-line-right {
+        width: 40px;
+        border-top: 1px solid;
+    }
+    
+    /* Portfoio
+    --------------------------- */
+    .portfolio-cats {
+        ul {
+            display: block;
+        }
+        li {
+            display: block;
+            padding: 0;
+            a {
+                
+            }
+            + li a {
+                border-left-width: 1px;
+                border-top-width: 0;
+            }
+        }
+    }
+    
+    /* Testimonial
+    --------------------------- */
+    .cell-testimonial-logo {
+        width: 80px;
+    }
+    .cell-testimonial-content {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+    
+}

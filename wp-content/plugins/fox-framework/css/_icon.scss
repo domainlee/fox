@@ -1,0 +1,48 @@
+.fox-icon-wrapper {
+    display: inline-block;
+    margin: 0 2px 5px 0;
+}
+
+.fox-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    border: 2px solid;
+    text-align: center;
+
+    color: inherit;
+    outline: 0 !important;
+    text-decoration: none;
+
+    &:not(.custom-color):hover {
+        background: #111;
+        border-color: #111;
+        color: white;
+    }
+
+    i {
+        display: block;
+        line-height: inherit;
+    }
+}
+
+.icon-wrapper-left,
+.icon-wrapper-right,
+.icon-wrapper-center {
+    display: block;
+    
+    .fox-icon {
+        display: inline-block;
+    }
+}
+.icon-wrapper-left {
+    text-align: left;
+}
+.icon-wrapper-center {
+    text-align: center;
+}
+.icon-wrapper-right {
+    text-align: right;
+}

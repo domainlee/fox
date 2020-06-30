@@ -1,0 +1,81 @@
+@import "bourbon/bourbon";
+@import "media-queries";
+
+@import "base";
+
+// VC Elements
+@import "row";
+
+// Fox Elements
+@import "button";
+@import "gallery";
+@import "heading";
+@import "helpers";
+@import "instagram";
+@import "mailchimp";
+@import "slider";
+@import "widgets";
+
+// Responsive Elements
+@import "screens/tablet";
+@import "screens/phone";
+
+.wpb_heading {
+    margin: 0 0 20px;
+}
+
+// GOOGLE MAP
+.wpb_gmaps_widget .wpb_wrapper {
+    padding: 0;
+}
+
+/* Animation
+--------------------- */
+.fox-animation-element {
+    @include transition( all .4s $ease-out-back );
+    
+    opacity: 0;
+    visibility: hidden;
+    
+    &.animation-fade {
+        opacity: 0;
+        visibility: hidden;
+        
+        @include transition( all .6s ease-out );
+    }
+    
+    &.animation-top {
+        @include transform( translate(0,-10px) );
+    }
+    &.animation-bottom {
+        @include transform( translate(0,10px) );
+    }
+    &.animation-left {
+        @include transform( translate(-10px,0) );
+    }
+    &.animation-right {
+        @include transform( translate(10px,0) );
+    }
+    
+    &.running_animation {
+        
+        opacity: 1;
+        visibility: visible;
+    
+        &.animation-top,
+        &.animation-bottom,
+        &.animation-left,
+        &.animation-right {
+        }
+        
+        &.animation-fade {
+        }
+        
+    }
+}
+
+/* Arrows
+--------------------- */
+.tparrows {
+    background: #111;
+}

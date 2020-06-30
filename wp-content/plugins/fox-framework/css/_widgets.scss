@@ -1,0 +1,210 @@
+/* Post List
+------------------------------------------ */
+.fox-post-widget + .fox-post-widget {
+    border-top: 1px dotted #999;
+    margin-top: 1.5em;
+    padding-top: 1.5em;
+}
+
+.post-widget-inner {
+    overflow: hidden;
+}
+.post-widget-thumbnail {
+    display: block;
+    float: left;
+    width: 82px;
+    margin: 0 1.2em 0 0;
+    img {
+        display: block;
+        margin: 0;
+    }
+}
+.post-widget-title {
+    clear: none;
+    font-size: 1.2em;
+    text-transform: none;
+    letter-spacing: 1px;
+    margin-bottom: .3em;
+    a {
+        color: inherit;
+        outline: 0;
+    }
+}
+.fox-post-widget .entry-date {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Pinterest
+------------------------------------------ */
+.fox-pin-list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: -4px -2px 0;
+    overflow: hidden;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-out;
+    &.loaded {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    li {
+        display: block;
+        float: left;
+        width: 50%;
+        padding: 4px 2px 0;
+    }
+    a {
+        display: block;
+        color: inherit;
+        outline: 0;
+        width: 100%;
+        text-decoration: none;
+        
+        &:hover {
+            opacity: .85;
+        }
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.widget-pin-follow {
+    margin: 1em 0 0;
+    a {
+        display: table;
+        margin: 0 auto;
+        background: #bd081c;
+        color: white;
+        line-height: 36px;
+        padding: 0 24px;
+        border-radius: 2px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+        font-weight: 600;
+        outline: 0;
+        
+        box-shadow: 0 -3px 0 rgba(0,0,0,.2) inset;
+        
+        i {
+            line-height: inherit;
+            margin-left: 5px;
+        }
+    }
+}
+
+
+/* Instagram
+------------------------------------------ */
+.fox-instagram-widget {
+    @include clearfix;
+    
+    .fox-button {
+        margin: 1em 0 0;
+    }
+}
+.fox-instagram-widget ul {
+    list-style: none;
+    display: block;
+    margin: -5px;
+    padding: 0;
+}
+.fox-instagram-widget ul:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+.fox-instagram-widget ul li {
+    float: left;
+    padding: 5px;
+}
+.fox-instagram-widget ul li a {
+    position: relative;
+    display: block;
+    outline: 0;
+    text-decoration: none;
+}
+.fox-instagram-widget ul li a:hover {
+    box-shadow: 5px 5px 0 #111;
+}
+.fox-instagram-widget ul li a img {
+    display: block;
+    width: 100%;
+}
+
+    /* like count */
+.fox-instagram-widget ul li a .photo-text {
+    display: none; /* todo list */
+    position: absolute;
+    z-index: 20;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px 0;
+    text-align: center;
+    background: rgba(255,255,255,.8);
+    font-size: 12px;
+    color: #000;
+    
+    transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.fox-instagram-widget ul li a .photo-text span + span {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.fox-instagram-widget ul li a .photo-text i {
+    margin-right: 2px;
+}
+
+.fox-instagram-widget.column-1 ul li {
+    width: 100%;
+}
+.fox-instagram-widget.column-2 ul li {
+    width: 50%;
+}
+.fox-instagram-widget.column-3 ul li {
+    width: 33.33%;
+}
+.fox-instagram-widget.column-4 ul li {
+    width: 25%;
+}
+.fox-instagram-widget.column-5 ul li {
+    width: 20%;
+}
+.fox-instagram-widget.column-6 ul li {
+    width: 16.66%;
+}
+.fox-instagram-widget.column-7 ul li {
+    width: 14.28%;
+}
+.fox-instagram-widget.column-8 ul li {
+    width: 12.5%;
+}
+.fox-instagram-widget.column-9 ul li {
+    width: 11.11%;
+}
+
+.instagram-button {
+    text-align: center;
+    margin: 20px 0 0;
+}
+a.fox-btn.follow-us {
+    
+    line-height: 28px;
+    border-width: 2px;
+    
+    &:hover {
+    }
+    
+}

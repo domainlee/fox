@@ -1,0 +1,244 @@
+.gal-item {
+    display: block;
+    overflow: hidden;
+}
+.fox-gallery-grid {
+    
+    display: flex;
+    flex-flow:  row wrap;
+    
+    &.column-1 {
+        .gal-item,
+        .grid-sizer {
+            width: 100%;
+        }
+    }
+    &.column-2 {
+        .gal-item,
+        .grid-sizer {
+            width: 50%;
+        }
+    }
+    &.column-3 {
+        .gal-item,
+        .grid-sizer {
+            width: 33.33%;
+        }
+    }
+    &.column-4 {
+        .gal-item,
+        .grid-sizer {
+            width: 25%;
+        }
+    }
+    &.column-5 {
+        .gal-item,
+        .grid-sizer {
+            width: 20%;
+        }
+    }
+    &.column-6 {
+        .gal-item,
+        .grid-sizer {
+            width: 16.66%;
+        }
+    }
+    &.column-7 {
+        .gal-item,
+        .grid-sizer {
+            width: 14.28%;
+        }
+    }
+    &.column-8 {
+        .gal-item,
+        .grid-sizer {
+            width: 12.5%;
+        }
+    }
+    &.column-9 {
+        .gal-item,
+        .grid-sizer {
+            width: 11.11%;
+        }
+    }
+    &.column-10 {
+        .gal-item,
+        .grid-sizer {
+            width: 10%;
+        }
+    }
+}
+.fox-gallery-grid {
+    margin: -16px;
+    .gal-item {
+        padding: 16px;
+        img {
+        }
+    }
+}
+.fox-gallery-masonry {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    &.loaded {
+        opacity: 1;
+        visibility: visible;
+    }
+    .gal-item {
+        float: left;
+    }
+}
+.gal-item-wrapper {
+    overflow: hidden;
+}
+.gal-item-inner {
+    display: block;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    > a {
+        display: block;
+        background: #f0f0f0;
+    }
+}
+.gal-item-inner a,
+.gal-item-inner img {
+    outline: 0;
+    display: block;
+    text-decoration: none;
+}
+.fox-gallery-grid .simple-caption,
+.fox-gallery-masonry .simple-caption {
+    font-size: .85em;
+    line-height: 1.45;
+    display: block;
+    margin: .5em 0 0;
+}
+
+/* Gallery justified
+--------------------- */
+.fox-gallery-justified {
+    margin: 0;
+    min-height: 200px;
+    .gal-item {
+        display: none;
+    }
+    
+}
+// caption
+.simple-caption,
+.simple-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    background: rgba(0,0,0,.9);
+    color: white;
+    padding: 5px 16px;
+    font-size: .9em;
+    line-height: 1.5;
+    display: block;
+    transform: translate(0, 100%);
+    transition: all .3s ease;
+    font-family: $heading;
+    font-weight: bold;
+    font-size: 12px;
+    
+    a {
+        display: inline !important;
+        color: inherit;
+    }
+}
+.photo-container:hover .simple-caption,
+.gal-item-inner:hover .simple-caption {
+    transform: translate(0,0);
+}
+.image-container{
+    position: relative;
+}
+.photo-container{
+    float: left;
+    position: relative;
+    overflow: hidden;
+    a {
+        display: block;
+        outline: 0;
+        color: inherit;
+        text-decoration: none;
+    }
+    img {
+        display: block;
+    }
+}
+.image-thumb{
+    position: relative;
+    background-color: #eee;
+}
+
+/* Metro Gallery
+--------------------- */
+.fox-gallery-metro {
+    display: block;
+    overflow: hidden;
+    
+    .gal-item {
+        display: block;
+        float: left;
+        position: relative;
+        
+        &:nth-child(6n+1) {
+            width: 66.66%;
+            clear: left;
+        }
+        &:nth-child(6n+2) {
+            width: 33.34%;
+        }
+        &:nth-child(6n+3) {
+            width: 33.34%;
+        }
+        &:nth-child(6n+4) {
+            width: 33.34%;
+        }
+        &:nth-child(6n+5) {
+            width: 66.66%;
+            float: right;
+        }
+        &:nth-child(6n) {
+            width: 33.34%;
+        }
+    }
+    
+    .height-element {
+        padding-bottom: 80%;
+    }
+    
+    .gal-item-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .gal-item-inner {
+        
+        width: 100%;
+        height: 100%;
+        position: relative;
+        
+        .bg-thumb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .height-element {
+            display: none;
+        }
+        
+    }
+}

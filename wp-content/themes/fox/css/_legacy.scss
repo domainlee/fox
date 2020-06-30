@@ -1,0 +1,249 @@
+/* Old Instagram Widget
+------------------------------ */
+.instagram-pics {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.instagram-pics li {
+    display: block;
+    float: left;
+    width: 33.33%;
+    padding: 3px;
+}
+.instagram-pics li img {
+    display: block;
+    width: 100%;
+}
+.null-instagram-feed .clear {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.null-instagram-feed .clear a {
+    display: inline-block;
+    color: #000;
+    font-size: 16px;
+    padding: 5px 12px;
+    text-decoration: none;
+    border: 1px solid #777;
+    @include transition( all .3s ease-out );
+    
+    &:hover {
+        border-color: $accent;
+        color: $accent;
+    }
+}
+
+/* Instagram
+------------------------------------------ */
+.wi-instagram-widget {
+    overflow: hidden;
+    .wi-button {
+        margin: 1em 0 0;
+    }
+}
+.wi-instagram-widget ul {
+    list-style: none;
+    display: block;
+    margin: -5px;
+    padding: 0;
+}
+.wi-instagram-widget ul:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+.wi-instagram-widget ul li {
+    float: left;
+    padding: 5px;
+}
+.wi-instagram-widget ul li a {
+    position: relative;
+    display: block;
+    outline: 0;
+    text-decoration: none;
+    overflow: hidden;
+}
+.wi-instagram-widget ul li a:hover {
+    
+}
+.wi-instagram-widget ul li a img {
+    display: block;
+    width: 100%;
+}
+
+    /* like count */
+.wi-instagram-widget ul li a .photo-text {
+    display: none; /* todo list */
+    position: absolute;
+    z-index: 20;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px 0;
+    text-align: center;
+    background: rgba(255,255,255,.8);
+    font-size: 12px;
+    color: #000;
+    
+    transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.wi-instagram-widget ul li a .photo-text span + span {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.wi-instagram-widget ul li a .photo-text i {
+    margin-right: 2px;
+}
+
+.wi-instagram-widget.column-1 ul li {
+    width: 100%;
+}
+.wi-instagram-widget.column-2 ul li {
+    width: 50%;
+}
+.wi-instagram-widget.column-3 ul li {
+    width: 33.33%;
+}
+.wi-instagram-widget.column-4 ul li {
+    width: 25%;
+}
+.wi-instagram-widget.column-5 ul li {
+    width: 20%;
+}
+.wi-instagram-widget.column-6 ul li {
+    width: 16.66%;
+}
+.wi-instagram-widget.column-7 ul li {
+    width: 14.28%;
+}
+.wi-instagram-widget.column-8 ul li {
+    width: 12.5%;
+}
+.wi-instagram-widget.column-9 ul li {
+    width: 11.11%;
+}
+
+    /* latest tweets */
+.widget_displaytweetswidget > p {
+    display: block;
+    padding-left: 30px;
+    position: relative;
+    overflow: hidden;
+    font-size: 0.9em;
+}
+.widget_displaytweetswidget > p:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    
+    content: "\f099";
+    position: absolute;
+    left: 0px;
+    top: 6px;
+    color: #45BCF0;
+}
+.widget_displaytweetswidget > p a {
+    border-bottom: 1px dotted;
+}
+.widget_displaytweetswidget > p a:hover {
+    border-bottom: 1px solid;
+}
+
+    /* MOST VIEWED POSTS - since 3.0 */
+.widget_post_views_counter_list_widget {
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    li {
+        display: block;
+        & + li {
+            margin-top: 24px;
+        }
+    }
+    .post-thumbnail {
+        display: block;
+        position: relative;
+        margin-bottom: 10px;
+        img {
+            display: block;
+            width: 100%;
+        }
+        .view-count {
+            background: #000;
+            color: #fff;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 2px 8px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 11px;
+        }
+    }
+}
+.popular-title {
+    margin-bottom: .5em;
+}
+.popular-excerpt {
+    p {
+        margin: 0;
+    }
+}
+
+    /* popular posts */
+.popular-thumbnail-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+.popular-thumbnail img {
+    display: block;
+    width: 100%;
+}
+.popular-counter {
+    position: absolute;
+    font-family: serif;
+    font-size: 62px;
+    line-height: 1;
+    color: #fff;
+    font-style: italic;
+    bottom: 0;
+    right: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.1);
+}
+.view-count {
+    background: #000;
+    color: #fff;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2px 8px;
+    font-family: $heading;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+.popular-content {
+    font-size: .9em
+}
+.widget a.readmore {
+}
+.widget a.readmore:hover {
+    color: $accent;
+    text-decoration: none;
+}
